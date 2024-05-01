@@ -19,7 +19,7 @@ const ProjectCard = ({ index, name, description, tags, image, clientName }) => {
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        {image === "/src/assets/omaelisaApp.png" ? (
+        {image.includes("omaelisaApp") ? (
           <div className="relative w-full h-[680px]">
             <img
               src={image}
