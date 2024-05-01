@@ -4,92 +4,90 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
 export const mobileLinks = [
-    {
-      id: 1,
-      child: (
-        <>
+  {
+    id: 1,
+    child: (
+      <>
         <FaLinkedin size={30} />
-        </>
-      ),
-      href: "https://www.linkedin.com/in/dipanjan-ghosh-b463b026",
-      style: "rounded-tr-md",
-    },
-    {
-      id: 2,
-      child: (
-        <>
+      </>
+    ),
+    href: "https://www.linkedin.com/in/dipanjan-ghosh-b463b026",
+    style: "rounded-tr-md",
+  },
+  {
+    id: 2,
+    child: (
+      <>
         <FaGithub size={30} />
-        </>
-      ),
-      href: "https://github.com/dipanjan1988",
-    },
-    {
-      id: 3,
-      child: (
-        <>
+      </>
+    ),
+    href: "https://github.com/dipanjan1988",
+  },
+  {
+    id: 3,
+    child: (
+      <>
         <HiOutlineMail size={30} />
-        </>
-      ),
-      href: "mailto:dipanjanghosh1988@gmail.com",
-    },
-    {
-      id: 4,
-      child: (
-        <>
+      </>
+    ),
+    href: "mailto:dipanjanghosh1988@gmail.com",
+  },
+  {
+    id: 4,
+    child: (
+      <>
         <BsFillPersonLinesFill size={30} />
-        </>
-      ),
-      style: "rounded-br-md",
-      href: "/Resume-Dipanjan-Ghosh.pdf",
-      download: true,
-    },
-  ];
-  
+      </>
+    ),
+    style: "rounded-br-md",
+    href: "/Resume-Dipanjan-Ghosh.pdf",
+    download: true,
+  },
+];
+
 export const links = [
-    {
-      id: 1,
-      child: (
-        <>
-          LinkedIn <FaLinkedin size={30} />
-        </>
-      ),
-      href: "https://www.linkedin.com/in/dipanjan-ghosh-b463b026",
-      style: "rounded-tr-md",
-    },
-    {
-      id: 2,
-      child: (
-        <>
-          GitHub <FaGithub size={30} />
-        </>
-      ),
-      href: "https://github.com/dipanjan1988",
-    },
-    {
-      id: 3,
-      child: (
-        <>
-          Mail <HiOutlineMail size={30} />
-        </>
-      ),
-      href: "mailto:dipanjanghosh1988@gmail.com",
-    },
-    {
-      id: 4,
-      child: (
-        <>
-          Resume <BsFillPersonLinesFill size={30} />
-        </>
-      ),
-      style: "rounded-br-md",
-      href: "/Resume-Dipanjan-Ghosh.pdf",
-      download: true,
-    },
-  ];
-  
+  {
+    id: 1,
+    child: (
+      <>
+        LinkedIn <FaLinkedin size={30} />
+      </>
+    ),
+    href: "https://www.linkedin.com/in/dipanjan-ghosh-b463b026",
+    style: "rounded-tr-md",
+  },
+  {
+    id: 2,
+    child: (
+      <>
+        GitHub <FaGithub size={30} />
+      </>
+    ),
+    href: "https://github.com/dipanjan1988",
+  },
+  {
+    id: 3,
+    child: (
+      <>
+        Mail <HiOutlineMail size={30} />
+      </>
+    ),
+    href: "mailto:dipanjanghosh1988@gmail.com",
+  },
+  {
+    id: 4,
+    child: (
+      <>
+        Resume <BsFillPersonLinesFill size={30} />
+      </>
+    ),
+    style: "rounded-br-md",
+    href: "/Resume-Dipanjan-Ghosh.pdf",
+    download: true,
+  },
+];
 
 const SocialLinks = () => {
-  
   return (
     <div className="hidden flex-col top-[35%] left-0 fixed lg:flex absolute z-[4]">
       <ul>

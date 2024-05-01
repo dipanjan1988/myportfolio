@@ -9,7 +9,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+      className={"w-full flex items-center py-5 fixed top-0 z-20 bg-primary"}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -25,11 +25,10 @@ const Navbar = () => {
             className="w-9 h-9 object-contain"
           />
           <p className="text-white underline text-[18px] font-bold cursor-pointer flex">
-            Dipanjan's &nbsp;{" "}
-            <span className="sm:block hidden"> | portfolio</span>
+            Dipanjan's &nbsp; <span> | portfolio</span>
           </p>
         </Link>
-        <ul className="list-none xs:hidden sm:hidden md:hidden xl:flex flex-row gap-10">
+        <ul className="list-none hidden sm:hidden md:hidden xl:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -47,7 +46,7 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="xl:hidden flex flex-1 justify-end items-center">
-          <ul className="list-none xs:flex xs:flex-row xs:relative xs:left-[0%] xs:right-[0%] lg:hidden">
+          <ul className="list-none md:flex md:flex-row md:relative md:left-[0%] sm:right-[0%] hidden lg:hidden">
             {mobileLinks.map((link) => (
               <li
                 key={link.id}
