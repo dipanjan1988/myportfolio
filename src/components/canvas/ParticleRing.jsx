@@ -4,8 +4,8 @@ import { OrbitControls, Sphere } from "@react-three/drei";
 import { pointsInner, pointsOuter } from "../../utils/particleUtil";
 
 const ParticleRing = () => {
-    return (
-      <div className='w-full h-auto absolute inset-0 z-[-1]'>
+  return (
+    <div className="w-full h-auto absolute inset-0 z-[-1]">
       <Canvas
         camera={{
           position: [10, -7.5, -5],
