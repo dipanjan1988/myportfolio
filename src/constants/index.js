@@ -52,7 +52,7 @@ export const navLinks = [
     title: "Achievements",
   },
   {
-    id: "location",
+    id: "mylocation",
     title: "Location",
   },
   {
