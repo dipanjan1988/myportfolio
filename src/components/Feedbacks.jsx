@@ -6,29 +6,21 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
 
-const FeedbackCard = ({
-  index,
-  testimonial,
-  name,
-  company,
-  time
-}) => (
+const FeedbackCard = ({ index, testimonial, name, company, time }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 1.5, 1.75)}
-    className='bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full'
+    className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
   >
-    <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-    <p className='mt-2 text-secondary text-[12px]'>{time}</p>
-    <p className='text-white font-black text-[48px]'>"</p>
+    <h3 className="text-white font-bold text-[24px]">{name}</h3>
+    <p className="mt-2 text-secondary text-[12px]">{time}</p>
+    <p className="text-white font-black text-[48px]">"</p>
 
-    <div className='mt-1'>
-      <p className='text-white tracking-wider text-[18px]'>{testimonial}</p>
+    <div className="mt-1">
+      <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
 
-      <div className='mt-7 flex justify-between items-center gap-1'>
-        <div className='flex-1 flex flex-col'>
-          <p className='mt-1 text-secondary text-[12px]'>
-            {company}
-          </p>
+      <div className="mt-7 flex justify-between items-center gap-1">
+        <div className="flex-1 flex flex-col">
+          <p className="mt-1 text-secondary text-[12px]">{company}</p>
         </div>
       </div>
     </div>
@@ -37,21 +29,27 @@ const FeedbackCard = ({
 
 const Feedbacks = () => {
   return (
-    <div className={`mt-12 bg-black-100 rounded-[20px]`}>
-      <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
-      >
-        <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What I have achieved</p>
-          <h2 className={styles.sectionHeadText}>Certifications.</h2>
-        </motion.div>
+    <section className="relative w-full h-screen mx-auto">
+      <div className={`mt-12 bg-black-100 rounded-[20px]`}>
+        <div
+          className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
+        >
+          <motion.div variants={textVariant()}>
+            <p className={styles.sectionSubText}>What I have achieved</p>
+            <h2 className={styles.sectionHeadText}>Certifications.</h2>
+          </motion.div>
+        </div>
+        <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+          {testimonials.map((testimonial, index) => (
+            <FeedbackCard
+              key={testimonial.name}
+              index={index}
+              {...testimonial}
+            />
+          ))}
+        </div>
       </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
-        ))}
-      </div>
-    </div>
+    </section>
   );
 };
 

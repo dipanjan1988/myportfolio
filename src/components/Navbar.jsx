@@ -90,6 +90,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       isActive ? "text-white border-b-2" : "text-secondary"
                     }
+                    onClick={() => setToggle(!toggle)}
                   >
                     {link.title}
                   </NavLink>
